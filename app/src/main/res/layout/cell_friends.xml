@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/friends_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user_2"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            >
+
+            <TextView
+                android:id="@+id/friends_name"
+                android:text="种子团队"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textBlack"
+                android:textSize="15sp"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/friends_signature"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="专为广大V友补给成长途中所需的各种能量。"
+                android:textColor="@color/text_grey_light"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:lines="1"
+                android:ellipsize="end"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/friends_btn_delete"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_delete_bg"
+            android:text="取消关注"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_light"
+            />
+    </LinearLayout>
+</LinearLayout>

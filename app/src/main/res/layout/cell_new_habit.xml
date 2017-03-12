@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        >
+
+        <ImageView
+            android:id="@+id/new_habit_icon"
+            android:src="@drawable/tree_seed"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/new_habit_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="left"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        >
+        <TextView
+            android:id="@+id/new_habit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="早起"
+            android:textColor="@color/textBlack"
+            android:textSize="15sp"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/new_habit_selected_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="785230"
+                android:textColor="@color/text_grey_light"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人在坚持"
+                android:textColor="@color/text_grey_light"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

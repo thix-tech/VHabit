@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+    <LinearLayout
+        android:id="@+id/lin_habit_list"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        >
+
+        <LinearLayout
+            android:id="@+id/lin_habit_hot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/new_habit_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门"
+                android:textSize="15sp"
+                android:textColor="@color/text_no_letter_first"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_habit_health"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/new_habit_health"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="健康"
+                android:textSize="15sp"
+                android:textColor="@color/text_no_letter_first"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_habit_exercise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/new_habit_exercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="运动"
+                android:textSize="15sp"
+                android:textColor="@color/text_no_letter_first"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_habit_learning"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/new_habit_learning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学习"
+                android:textSize="15sp"
+                android:textColor="@color/text_no_letter_first"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lin_habit_efficiency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/new_habit_efficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="效率"
+                android:textSize="15sp"
+                android:textColor="@color/text_no_letter_first"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_habit_thinking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/new_habit_thinking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="思考"
+                android:textSize="15sp"
+                android:textColor="@color/text_no_letter_first"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/cursor"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_height="2dp">
+        <ImageView
+            android:id="@+id/new_habit_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/lines_bg"
+        />
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:background="@color/greyBg"
+             tools:context="com.sqchen.vhabit.fragment.personal.ByTimeFrag">
+
+    <com.sqchen.vhabit.widgets.ListViewForScrollView
+        android:id="@+id/list_view_by_time"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/greyBg"
+        android:dividerHeight="10dp"
+        android:layout_margin="10dp"
+        android:scrollbars="none"
+        />
+</LinearLayout>

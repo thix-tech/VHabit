@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">VHabit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="frag_title_left">编辑</string>
+    <string name="frag_title_center">习惯</string>
+    <string name="str_find_hot">热门</string>
+    <string name="str_find_focus">关注</string>
+    <string name="str_find_new">最新</string>
+    <string name="user_name">帅气陈</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="str_msg_no_letter">尚无任何私信</string>
+    <string name="str_msg_no_letter_1">支持和其他成员一对一的进行聊天\n用表情贴纸让交流更有趣</string>
+    <string name="str_msg_notice">通知</string>
+    <string name="str_ps_personal">我的</string>
+    <string name="str_msg_no_notice">没有收到通知？</string>
+    <string name="str_msg_no_notice_1">新的点赞、评论、关注都会给你推送通知\n你可以在设置中将推送关闭</string>
+    <string name="txt_frame_tips">提示文字</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_no_fans">你这么帅居然还没有粉丝，\n赶快去勾搭一个吧。</string>
+    <string name="str_selected_num">人在坚持</string>
+    <string name="str_like_num">个赞</string>
+</resources>

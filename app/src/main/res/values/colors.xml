@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="textNormal">#898F9C</color>
+    <color name="textPressed">#3DCC79</color>
+    <color name="greyBg">#F2F2F2</color>
+    <color name="green">#3DCC79</color>
+    <color name="white">#ffffffff</color>
+    <color name="textBlack">#4A4A4A</color>
+    <color name="textGrey">#ADB2BB</color>
+    <color name="border_clo">#ccc</color>
+    <color name="text_no_focus">#CAEED6</color>
+    <color name="text_no_letter_first">#898F9C</color>
+    <color name="text_grey_light">#ADB2BB</color>
+    <color name="hot_live_style">#4D4D4D</color>
+    <color name="hot_live_style_item">#666666</color>
+    <color name="personal_habit_card">#FAFAF0</color>
+    <color name="personal_habit_card_text">#D3CFC6</color>
+    <color name="personal_habit_card_time">#CCCAB8</color>
+    <color name="ring_progress_bg">#EDF0FB</color>
+    <color name="lines_bg">#EDEDED</color>
+    <color name="exit_text">#F55F54</color>
+    <color name="wallet_get_out">#FCC754</color>
+    <color name="setting_item_bg">#F3F3F7</color>
+    <color name="tree_text">#ADB2BB</color>
+    <color name="search_bg">#37BF70</color>
+    <color name="search_text">#7CE7A9</color>
+</resources>

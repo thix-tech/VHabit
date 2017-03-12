@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/greyBg"
+              android:orientation="vertical"
+             tools:context="com.sqchen.vhabit.fragment.find.FindFocusFrag">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+
+        <com.sqchen.vhabit.widgets.ListViewForScrollView
+            android:id="@+id/focus_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@color/greyBg"
+            android:dividerHeight="10dp"
+            android:layout_margin="10dp"
+            android:scrollbars="none"
+            />
+
+    </ScrollView>
+
+</LinearLayout>

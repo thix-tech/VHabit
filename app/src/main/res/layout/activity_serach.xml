@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_serach"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sqchen.vhabit.activity.SearchActivity">
+
+    <include layout="@layout/include_search_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:id="@+id/search_lin_habit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/search_txt_habit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="习惯"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_lin_user"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/search_txt_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/search_lines_img"
+        android:layout_width="80dp"
+        android:layout_height="3dp"
+        android:background="@color/green"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/search_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    android:background="@color/greyBg"
+    >
+    <LinearLayout
+        android:id="@+id/lin_habit_cell"
+        style="@style/wrap_layout"
+        >
+
+        <ImageView
+            android:id="@+id/habit_img"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/tree_seed"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/habit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textSize="15sp"
+                android:textColor="@color/textBlack"
+                android:layout_marginBottom="5dp"
+                android:text="对一天进行回顾"
+                />
+            <TextView
+                android:id="@+id/habit_time_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已坚持2天"
+                android:textSize="12sp"
+                android:textColor="@color/textGrey"
+                />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/habit_is_finish"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/finish"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

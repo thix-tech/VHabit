@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_tree"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.sqchen.vhabit.activity.TreeActivity">
+
+    <include
+        android:id="@+id/tree_title"
+        layout="@layout/include_top_actionbar" />
+
+    <TextView
+        android:id="@+id/tree_quotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tree_title"
+        android:layout_marginTop="30dp"
+        android:text="人生不能像做菜，把所有的料都准备\n好了才下锅"
+        android:textSize="16sp"
+        android:textColor="@color/tree_text"
+        android:gravity="center"
+        android:lines="2"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

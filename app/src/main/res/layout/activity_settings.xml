@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/greyBg"
+    tools:context="com.sqchen.vhabit.activity.SettingsActivity">
+
+
+    <com.sqchen.vhabit.widgets.CustomTitleView
+        android:id="@+id/settings_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rel_edit_info"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="编辑个人资料"
+                    android:textColor="@color/textBlack"
+                    android:layout_centerVertical="true"
+                    />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/my_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@color/white"
+                >
+                <LinearLayout
+                    android:id="@+id/lin_collection"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:text="我的收藏"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textBlack"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/lines_bg"
+                    android:layout_height="0.1dp"/>
+
+                <LinearLayout
+                    android:id="@+id/lin_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:text="我的钱包"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textBlack"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/lines_bg"
+                    android:layout_height="0.1dp"/>
+
+                <LinearLayout
+                    android:id="@+id/lin_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:text="我的订单"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textBlack"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/lines_bg"
+                    android:layout_height="0.1dp"/>
+
+                <LinearLayout
+                    android:id="@+id/lin_be_helper"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:text="我是帮帮手"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textBlack"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                >
+                <LinearLayout
+                    android:id="@+id/lin_binding"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:text="账号绑定"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textBlack"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/lines_bg"
+                    android:layout_height="0.1dp"/>
+
+                <LinearLayout
+                    android:id="@+id/lin_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:text="帮助中心"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textBlack"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/lines_bg"
+                    android:layout_height="0.1dp"/>
+
+                <LinearLayout
+                    android:id="@+id/lin_black_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:text="黑名单管理"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textBlack"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/lines_bg"
+                    android:layout_height="0.1dp"/>
+
+                <LinearLayout
+                    android:id="@+id/lin_msg_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:text="消息提醒设置"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textBlack"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_about_seed"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="20dp"
+                >
+                <TextView
+                    android:text="关于VHabit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textBlack"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_exit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:text="退出账号"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/exit_text"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

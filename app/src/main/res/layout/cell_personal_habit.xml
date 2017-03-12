@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:padding="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/personal_item_habit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多喝水"
+        android:textSize="15sp"
+        android:textColor="@color/hot_live_style_item"
+        />
+    <LinearLayout
+        android:id="@+id/personal_item_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:id="@+id/personal_time_begin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017 02.22"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_light"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_light"
+            />
+
+        <TextView
+            android:id="@+id/personal_time_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017 02.22"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_light"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共坚持"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/text_grey_light"
+            />
+
+        <TextView
+            android:id="@+id/personal_time_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_light"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="天"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_light"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/personal_item_dynamic"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:background="@color/personal_habit_card"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/personal_dynamic_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今天咳嗽好一点了。现在应该说是昨天了。昨天姐姐生日。姐姐长成了大人，三个孩子的母亲。生日快乐。"
+            android:lines="4"
+            android:ellipsize="end"
+            android:textColor="@color/personal_habit_card_text"
+            android:textSize="12sp"
+            android:padding="5dp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:text="- "
+                android:textSize="10sp"
+                android:textColor="@color/personal_habit_card_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/personal_dynamic_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2017.02.24"
+                android:textSize="10sp"
+                android:textColor="@color/personal_habit_card_time"
+                />
+            <TextView
+                android:text=" -"
+                android:textSize="10sp"
+                android:textColor="@color/personal_habit_card_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

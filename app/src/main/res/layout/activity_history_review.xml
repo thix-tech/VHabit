@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_history_review"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/greyBg"
+    tools:context="com.sqchen.vhabit.activity.HistoryReviewActivity">
+
+    <include layout="@layout/include_top_actionbar" />
+
+    <ListView
+        android:id="@+id/history_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp"
+        android:divider="@color/greyBg"
+        android:listSelector="@android:color/transparent"
+        />
+
+</LinearLayout>

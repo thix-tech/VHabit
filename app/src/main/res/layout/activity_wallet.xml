@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/setting_item_bg"
+    android:animateLayoutChanges="true"
+    tools:context="com.sqchen.vhabit.activity.CollectionActivity">
+
+    <include layout="@layout/include_top_actionbar" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/wallet_logo"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="余额"
+        android:textSize="18sp"
+        android:textColor="@color/textBlack"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_rest_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥ 0.00"
+        android:textSize="18sp"
+        android:textColor="@color/textBlack"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_add_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_add_money_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:text="充值"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/btn_get_out_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_money_out_bg"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="提现至微信钱包"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/wallet_problems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="常见问题"
+        android:textSize="15sp"
+        android:textColor="@color/green"
+        />
+
+</LinearLayout>

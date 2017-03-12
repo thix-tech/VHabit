@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.sqchen.vhabit">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MyHabitDetails">
+        </activity>
+        <activity android:name=".activity.DragHabitActivity">
+        </activity>
+        <activity android:name=".activity.SettingsActivity">
+        </activity>
+        <activity android:name=".activity.BasicInfoActivity">
+        </activity>
+        <activity android:name=".activity.CollectionActivity">
+        </activity>
+        <activity android:name=".activity.WalletActivity">
+        </activity>
+        <activity android:name=".activity.OrderActivity">
+        </activity>
+        <activity android:name=".activity.BeHelperActivity">
+        </activity>
+        <activity android:name=".activity.BindingActivity">
+        </activity>
+        <activity android:name=".activity.HelpActivity">
+        </activity>
+        <activity android:name=".activity.BlackListActivity">
+        </activity>
+        <activity android:name=".activity.MsgSettingActivity">
+        </activity>
+        <activity android:name=".activity.AboutSeedActivity">
+        </activity>
+        <activity android:name=".activity.MoneyDetails">
+        </activity>
+        <activity android:name=".activity.DynamicDetails">
+        </activity>
+        <activity android:name=".activity.NewHabitActivity">
+        </activity>
+        <activity android:name=".activity.FriendsActivity">
+        </activity>
+        <activity android:name=".activity.HabitDetailsActivity">
+        </activity>
+        <activity android:name=".activity.SearchActivity">
+        </activity>
+        <activity android:name=".fragment.personal.ShareVHabit">
+        </activity>
+        <activity android:name=".activity.OthersActivity">
+        </activity>
+        <activity android:name=".activity.TreeActivity">
+        </activity>
+        <activity android:name=".activity.HistoryReviewActivity">
+        </activity>
+        <activity android:name=".activity.PublishDynamicActivity">
+        </activity>
+
+    </application>
+
+</manifest>

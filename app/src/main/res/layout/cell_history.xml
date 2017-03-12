@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/history_item_1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/layout_history_item_bg"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/usr_note_bg1"
+            >
+            <TextView
+                android:id="@+id/txt_dynamic_1"
+                android:text="今天跑了10圈"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:lines="4"
+                android:ellipsize="end"
+                android:padding="20dp"
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/txt_stick"
+                android:text="坚持"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_grey_light"
+                android:layout_marginLeft="5dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_num"
+                android:text="3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:layout_toRightOf="@+id/txt_stick"
+                />
+
+            <TextView
+                android:id="@+id/txt_days"
+                android:text="天"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_grey_light"
+                android:layout_toRightOf="@+id/txt_num"
+                />
+
+            <ImageView
+                android:id="@+id/img_like_1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_mindfeed_like"
+                android:layout_toLeftOf="@+id/txt_like_num_1"
+                />
+
+            <TextView
+                android:id="@+id/txt_like_num_1"
+                android:text="0"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_grey_light"
+                android:layout_toLeftOf="@+id/img_comment_1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                />
+
+            <ImageView
+                android:id="@+id/img_comment_1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_mindfeed_comment"
+                android:layout_toLeftOf="@+id/txt_comment_num_1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_comment_num_1"
+                android:text="0"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_grey_light"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/act_record_shadow"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/history_item_2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/layout_history_item_bg"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/usr_note_bg1"
+            >
+            <TextView
+                android:id="@+id/txt_dynamic_2"
+                android:text="今天跑了20圈"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:lines="4"
+                android:ellipsize="end"
+                android:padding="20dp"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/txt_stick_2"
+                android:text="坚持"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_grey_light"
+                android:layout_marginLeft="5dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_num_2"
+                android:text="3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:layout_toRightOf="@+id/txt_stick_2"
+                />
+
+            <TextView
+                android:id="@+id/txt_days_2"
+                android:text="天"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_grey_light"
+                android:layout_toRightOf="@+id/txt_num_2"
+                />
+
+            <ImageView
+                android:id="@+id/img_like_2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_mindfeed_like"
+                android:layout_toLeftOf="@+id/txt_like_num_2"
+                />
+
+            <TextView
+                android:id="@+id/txt_like_num_2"
+                android:text="0"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_grey_light"
+                android:layout_toLeftOf="@+id/img_comment_2"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                />
+
+            <ImageView
+                android:id="@+id/img_comment_2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_mindfeed_comment"
+                android:layout_toLeftOf="@+id/txt_comment_num_2"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_comment_num_2"
+                android:text="0"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_grey_light"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/act_record_shadow"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

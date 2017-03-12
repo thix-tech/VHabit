@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/greyBg"
+             android:id="@+id/frame_tips_layout"
+             tools:context="com.sqchen.vhabit.fragment.message.MsgNoticeFrag">
+
+    <LinearLayout
+        android:id="@+id/lin_msg_no_letter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/frame_center_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_frame_tips"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/text_grey_light"
+            />
+    </LinearLayout>
+</FrameLayout>

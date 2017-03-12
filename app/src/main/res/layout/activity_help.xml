@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/greyBg"
+    tools:context="com.sqchen.vhabit.activity.CollectionActivity">
+
+    <include layout="@layout/include_top_actionbar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="常见问题"
+        android:textColor="@color/text_no_letter_first"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/lin_problems"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/problems_txt_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置的闹钟提醒为什么不响？"
+                android:textColor="@color/textBlack"
+                android:textSize="15sp"
+                />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/go_to_right"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/problems_txt_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="如何签到/取消签到？"
+                android:textColor="@color/textBlack"
+                android:textSize="15sp"
+                />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/go_to_right"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/problems_txt_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="如何对习惯进行排序？"
+                android:textColor="@color/textBlack"
+                android:textSize="15sp"
+                />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/go_to_right"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/problems_txt_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在哪里看种子的生长状况？"
+                android:textColor="@color/textBlack"
+                android:textSize="15sp"
+                />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/go_to_right"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/problems_txt_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="plank计时器在哪里？"
+                android:textColor="@color/textBlack"
+                android:textSize="15sp"
+                />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/go_to_right"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/problems_txt_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="什么是习惯存档？"
+                android:textColor="@color/textBlack"
+                android:textSize="15sp"
+                />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/go_to_right"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/problems_txt_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="错过打卡时间怎样补签？"
+                android:textColor="@color/textBlack"
+                android:textSize="15sp"
+                />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/go_to_right"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/problems_txt_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="忘记帐号怎么办？"
+                android:textColor="@color/textBlack"
+                android:textSize="15sp"
+                />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/go_to_right"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

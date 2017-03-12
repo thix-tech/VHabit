@@ -1,7 +1,7 @@
 # VHabit
 An imitation of SeedHabit,which has been completed ninety percent from March 1 to March 12.
 
-*注:本项目模仿自“种子习惯”，仅供学习与交流，一切解释权归我帅气陈所有，转载须注明出处。*
+*注:本项目模仿自“种子习惯”，仅供学习与交流，一切解释权归帅气陈所有，转载须注明出处。*
 
 #涉及知识点
 

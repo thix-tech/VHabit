@@ -13,6 +13,10 @@ An imitation of SeedHabit,which has been completed ninety percent from March 1 t
 
 #Screenshots
 
+
+已完成:界面90% 
+
+
 ##习惯
 ![习惯](https://github.com/AmazingChen/VHabit-master/blob/master/images/Screenshot_2017-03-12-22-51-16-188.png);
 

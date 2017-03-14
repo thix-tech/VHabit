@@ -10,7 +10,7 @@
     tools:context="com.sqchen.vhabit.activity.MyHabitDetails">
 
 
-    <com.sqchen.vhabit.widgets.CustomTitleView
+    <com.sqchen.vhabit.widget.CustomTitleView
         android:id="@+id/habit_details_title_view"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
@@ -49,7 +49,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
                     >
-                    <com.sqchen.vhabit.widgets.RingProgressView
+                    <com.sqchen.vhabit.widget.RingProgressView
                         android:id="@+id/ring_progress"
                         android:layout_width="140dp"
                         android:layout_height="140dp"
@@ -328,7 +328,7 @@
 
             </LinearLayout>
 
-            <com.sqchen.vhabit.widgets.ListViewForScrollView
+            <com.sqchen.vhabit.widget.ListViewForScrollView
                 android:id="@+id/habit_details_listview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

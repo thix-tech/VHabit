@@ -14,8 +14,8 @@ import com.sqchen.vhabit.R;
 import com.sqchen.vhabit.activity.MyHabitDetails;
 import com.sqchen.vhabit.activity.NewHabitActivity;
 import com.sqchen.vhabit.adapter.HabitListAdapter;
-import com.sqchen.vhabit.beans.Habit;
-import com.sqchen.vhabit.widgets.CustomTitleView;
+import com.sqchen.vhabit.bean.Habit;
+import com.sqchen.vhabit.widget.CustomTitleView;
 
 import java.util.ArrayList;
 import java.util.List;

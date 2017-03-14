@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.sqchen.vhabit.R;
-import com.sqchen.vhabit.widgets.CustomTitleView;
+import com.sqchen.vhabit.widget.CustomTitleView;
 
 public class TreeActivity extends Activity {
 

@@ -1,4 +1,4 @@
-package com.sqchen.vhabit.widgets;
+package com.sqchen.vhabit.widget;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -9,7 +9,6 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.SweepGradient;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;

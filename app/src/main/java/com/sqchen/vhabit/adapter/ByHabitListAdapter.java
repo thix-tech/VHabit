@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sqchen.vhabit.R;
-import com.sqchen.vhabit.beans.Dynamic;
+import com.sqchen.vhabit.bean.Dynamic;
 
 import java.util.ArrayList;
 import java.util.List;

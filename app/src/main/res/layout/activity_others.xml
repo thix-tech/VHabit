@@ -158,12 +158,12 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <com.sqchen.vhabit.widgets.ViewPagerForScrollView
+            <com.sqchen.vhabit.widget.ViewPagerForScrollView
                 android:id="@+id/others_view_pager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 >
-            </com.sqchen.vhabit.widgets.ViewPagerForScrollView>
+            </com.sqchen.vhabit.widget.ViewPagerForScrollView>
         </LinearLayout>
 
     </ScrollView>

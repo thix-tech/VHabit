@@ -9,9 +9,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sqchen.vhabit.R;
-import com.sqchen.vhabit.beans.Dynamic;
-import com.sqchen.vhabit.utils.BitmapUtil;
-import com.sqchen.vhabit.widgets.CustomTitleView;
+import com.sqchen.vhabit.bean.Dynamic;
+import com.sqchen.vhabit.util.BitmapUtil;
+import com.sqchen.vhabit.widget.CustomTitleView;
 
 public class DynamicDetails extends Activity {
 

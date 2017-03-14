@@ -1,4 +1,4 @@
-package com.sqchen.vhabit.utils;
+package com.sqchen.vhabit.util;
 
 import android.content.Context;
 import android.graphics.Bitmap;

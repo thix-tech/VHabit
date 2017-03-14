@@ -12,7 +12,7 @@
         android:scrollbars="none"
         >
 
-        <com.sqchen.vhabit.widgets.ListViewForScrollView
+        <com.sqchen.vhabit.widget.ListViewForScrollView
             android:id="@+id/focus_listview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

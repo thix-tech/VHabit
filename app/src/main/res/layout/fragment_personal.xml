@@ -5,7 +5,7 @@
               android:orientation="vertical"
               android:background="@color/greyBg"
               tools:context="com.sqchen.vhabit.fragment.personal.PersonalFrag">
-    <com.sqchen.vhabit.widgets.CustomTitleView
+    <com.sqchen.vhabit.widget.CustomTitleView
         android:id="@+id/frag_title_personal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -160,12 +160,12 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <com.sqchen.vhabit.widgets.ViewPagerForScrollView
+            <com.sqchen.vhabit.widget.ViewPagerForScrollView
                 android:id="@+id/personal_view_pager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 >
-            </com.sqchen.vhabit.widgets.ViewPagerForScrollView>
+            </com.sqchen.vhabit.widget.ViewPagerForScrollView>
         </LinearLayout>
 
     </ScrollView>

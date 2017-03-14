@@ -90,26 +90,29 @@ public class MessageFrag extends Fragment implements View.OnClickListener,ViewPa
         參考鏈接：http://www.cnblogs.com/wt616/archive/2012/05/11/2496180.html
          */
         ViewTreeObserver treeObserver = mLinCenter.getViewTreeObserver();
-//        treeObserver.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-//            @Override
-//            public boolean onPreDraw() {
-//                //还没测量过时，测量、赋值
-//                if(!isMeasured) {
-//                    mImgWidth = mLinCenter.getMeasuredWidth() / 2;
-//                    Log.d("sqchen","观察者：" + mImgWidth);
-//                    //测量过后改变变量值
-//                    isMeasured = true;
-//                }
-//                return true;
-//            }
-//        });
-        treeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+        treeObserver.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
             @Override
-            public void onGlobalLayout() {
-                mImgWidth = mLinCenter.getWidth() / 2;
-                mLeftCenter = mLinCenter.getLeft();
+            public boolean onPreDraw() {
+                //还没测量过时，测量、赋值
+                if(!isMeasured) {
+                    mImgWidth = mLinCenter.getMeasuredWidth() / 2;
+                    Log.d("sqchen","观察者：" + mImgWidth);
+                    mLeftCenter = mLinCenter.getLeft();
+
+                    cursorAnim(0,mImgWidth,mLeftCenter);
+                    //测量过后改变变量值
+                    isMeasured = true;
+                }
+                return true;
             }
         });
+//        treeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+//            @Override
+//            public void onGlobalLayout() {
+//                mImgWidth = mLinCenter.getWidth() / 2;
+//                mLeftCenter = mLinCenter.getLeft();
+//            }
+//        });
 
         //填充选项卡
         mFragments = new ArrayList<Fragment>();
@@ -138,21 +141,15 @@ public class MessageFrag extends Fragment implements View.OnClickListener,ViewPa
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-        cursorAnim(0);
-    }
-
-    @Override
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.message_title_letter:
                 mViewPager.setCurrentItem(0);
-                cursorAnim(0);
+                cursorAnim(0,mImgWidth,mLeftCenter);
                 break;
             case R.id.message_title_notice:
                 mViewPager.setCurrentItem(1);
-                cursorAnim(1);
+                cursorAnim(1,mImgWidth,mLeftCenter);
                 break;
         }
     }
@@ -190,7 +187,8 @@ public class MessageFrag extends Fragment implements View.OnClickListener,ViewPa
         //再将选中项设置为选中状态
         btnArgs[arg0].setTextColor(getResources().getColor(R.color.white));
         btnArgs[arg0].setTextSize(18);
-        cursorAnim(arg0);
+        cursorAnim(arg0,mImgWidth,mLeftCenter);
+
     }
 
 
@@ -199,19 +197,19 @@ public class MessageFrag extends Fragment implements View.OnClickListener,ViewPa
      * 设置顶部tab的底部标识
      * @param position
      */
-    private void cursorAnim(int position) {
+    private void cursorAnim(int position,int lineWidth,int lineLeft) {
 
         //获取底部标识的布局参数对象
         LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mLineImg.getLayoutParams();
         //设置底部标识的宽度为屏幕宽度的1/6
-        lp.width = mImgWidth;
+        lp.width = lineWidth;
         mLineImg.setLayoutParams(lp);
         Log.d("sqchen","" + mImgWidth);
 
         //先将底部标识的开始横坐标设置为0
         cursorX = 0;
         //设置底部标识的开始横坐标
-        cursorX = mLeftCenter + mImgWidth * position;
+        cursorX = lineLeft + lineWidth * position;
         mLineImg.setX(cursorX);
     }
 

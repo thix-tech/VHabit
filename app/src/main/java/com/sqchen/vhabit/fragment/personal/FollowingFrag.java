@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.sqchen.vhabit.R;
 import com.sqchen.vhabit.adapter.FriendsListAdapter;
-import com.sqchen.vhabit.beans.User;
+import com.sqchen.vhabit.bean.User;
 
 import java.util.ArrayList;
 import java.util.List;

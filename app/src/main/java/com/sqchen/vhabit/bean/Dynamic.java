@@ -1,4 +1,4 @@
-package com.sqchen.vhabit.beans;
+package com.sqchen.vhabit.bean;
 
 import java.io.Serializable;
 import java.util.List;

@@ -18,7 +18,7 @@ import com.sqchen.vhabit.fragment.habit.HealthFrag;
 import com.sqchen.vhabit.fragment.habit.HotFrag;
 import com.sqchen.vhabit.fragment.habit.LearningFrag;
 import com.sqchen.vhabit.fragment.habit.ThinkingFrag;
-import com.sqchen.vhabit.widgets.CustomTitleView;
+import com.sqchen.vhabit.widget.CustomTitleView;
 
 import java.util.ArrayList;
 import java.util.List;

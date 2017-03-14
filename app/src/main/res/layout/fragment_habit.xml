@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/greyBg"
     >
-    <com.sqchen.vhabit.widgets.CustomTitleView
+    <com.sqchen.vhabit.widget.CustomTitleView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/frag_title_habit"

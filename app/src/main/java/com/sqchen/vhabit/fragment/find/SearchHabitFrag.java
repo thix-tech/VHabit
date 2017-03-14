@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 import com.sqchen.vhabit.R;
 import com.sqchen.vhabit.activity.HabitDetailsActivity;
-import com.sqchen.vhabit.beans.Habit;
-import com.sqchen.vhabit.utils.BitmapUtil;
+import com.sqchen.vhabit.bean.Habit;
+import com.sqchen.vhabit.util.BitmapUtil;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -11,8 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sqchen.vhabit.R;
-import com.sqchen.vhabit.beans.User;
-import com.sqchen.vhabit.utils.BitmapUtil;
+import com.sqchen.vhabit.bean.User;
+import com.sqchen.vhabit.util.BitmapUtil;
 
 import java.util.ArrayList;
 import java.util.List;

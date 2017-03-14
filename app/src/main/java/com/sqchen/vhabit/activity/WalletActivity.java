@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.sqchen.vhabit.R;
-import com.sqchen.vhabit.widgets.CustomTitleView;
+import com.sqchen.vhabit.widget.CustomTitleView;
 
 public class WalletActivity extends Activity {
 

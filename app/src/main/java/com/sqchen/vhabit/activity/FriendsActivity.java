@@ -16,7 +16,7 @@ import com.sqchen.vhabit.adapter.FragmentDealAdapter;
 import com.sqchen.vhabit.fragment.personal.FollowedFrag;
 import com.sqchen.vhabit.fragment.personal.FollowingFrag;
 import com.sqchen.vhabit.fragment.personal.ShareVHabit;
-import com.sqchen.vhabit.widgets.CustomTitleView;
+import com.sqchen.vhabit.widget.CustomTitleView;
 
 import java.util.ArrayList;
 import java.util.List;

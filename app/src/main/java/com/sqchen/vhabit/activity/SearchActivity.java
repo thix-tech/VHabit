@@ -15,7 +15,6 @@ import com.sqchen.vhabit.R;
 import com.sqchen.vhabit.adapter.FragmentDealAdapter;
 import com.sqchen.vhabit.fragment.find.SearchHabitFrag;
 import com.sqchen.vhabit.fragment.find.SearchUserFrag;
-import com.sqchen.vhabit.widgets.CustomTitleView;
 
 import java.util.ArrayList;
 import java.util.List;

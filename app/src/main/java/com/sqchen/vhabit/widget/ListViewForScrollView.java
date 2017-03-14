@@ -1,4 +1,4 @@
-package com.sqchen.vhabit.widgets;
+package com.sqchen.vhabit.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;

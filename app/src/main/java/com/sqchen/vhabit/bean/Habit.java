@@ -1,4 +1,4 @@
-package com.sqchen.vhabit.beans;
+package com.sqchen.vhabit.bean;
 
 /**
  * 用户习惯实体类

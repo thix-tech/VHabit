@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,8 +14,8 @@ import com.sqchen.vhabit.R;
 import com.sqchen.vhabit.activity.HabitDetailsActivity;
 import com.sqchen.vhabit.activity.OthersActivity;
 import com.sqchen.vhabit.activity.TreeActivity;
-import com.sqchen.vhabit.beans.Dynamic;
-import com.sqchen.vhabit.utils.BitmapUtil;
+import com.sqchen.vhabit.bean.Dynamic;
+import com.sqchen.vhabit.util.BitmapUtil;
 
 import java.util.List;
 

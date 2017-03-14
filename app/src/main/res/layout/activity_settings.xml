@@ -10,7 +10,7 @@
     tools:context="com.sqchen.vhabit.activity.SettingsActivity">
 
 
-    <com.sqchen.vhabit.widgets.CustomTitleView
+    <com.sqchen.vhabit.widget.CustomTitleView
         android:id="@+id/settings_title_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

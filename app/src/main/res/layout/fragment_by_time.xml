@@ -5,7 +5,7 @@
               android:background="@color/greyBg"
              tools:context="com.sqchen.vhabit.fragment.personal.ByTimeFrag">
 
-    <com.sqchen.vhabit.widgets.ListViewForScrollView
+    <com.sqchen.vhabit.widget.ListViewForScrollView
         android:id="@+id/list_view_by_time"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

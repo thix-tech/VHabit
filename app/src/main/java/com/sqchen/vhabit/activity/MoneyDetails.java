@@ -1,13 +1,12 @@
 package com.sqchen.vhabit.activity;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.sqchen.vhabit.R;
-import com.sqchen.vhabit.widgets.CustomTitleView;
+import com.sqchen.vhabit.widget.CustomTitleView;
 
 public class MoneyDetails extends Activity {
 

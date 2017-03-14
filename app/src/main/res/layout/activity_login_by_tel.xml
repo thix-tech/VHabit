@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_by_tel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sqchen.vhabit.activity.LoginByTel">
+
+
+    <include layout="@layout/include_top_actionbar" />
+
+    <EditText
+        android:id="@+id/edit_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="手机号"
+        android:background="@null"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:inputType="number"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/green_line"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        />
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="密码"
+        android:background="@null"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:inputType="textPassword"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/green_line"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        />
+
+    <Button
+        android:id="@+id/btn_login_by_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_login"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:text="登录"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘记密码?"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/lin_new_user"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="新用户?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txt_register"
+                android:text="去用手机注册"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/lin_new_user"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:gravity="center_vertical"
+            >
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:background="@color/lines_bg"
+                />
+            <TextView
+                android:text="其他方式登录"
+                android:textColor="@color/text_grey_light"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:background="@color/lines_bg"
+                />
+        </LinearLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_img_bg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/img_green_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/lin_others"
+            android:layout_marginTop="20dp"
+            />
+        <ImageView
+            android:id="@+id/img_by_eamil"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/login_email"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/lin_others"
+            android:layout_marginTop="30dp"
+            />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

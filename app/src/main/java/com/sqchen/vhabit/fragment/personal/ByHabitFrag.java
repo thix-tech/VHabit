@@ -8,14 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.ScrollView;
 
 import com.sqchen.vhabit.R;
 import com.sqchen.vhabit.activity.HistoryReviewActivity;
 import com.sqchen.vhabit.adapter.ByHabitListAdapter;
-import com.sqchen.vhabit.beans.Dynamic;
-import com.sqchen.vhabit.widgets.ListViewForScrollView;
+import com.sqchen.vhabit.bean.Dynamic;
+import com.sqchen.vhabit.widget.ListViewForScrollView;
 
 import java.util.ArrayList;
 import java.util.List;

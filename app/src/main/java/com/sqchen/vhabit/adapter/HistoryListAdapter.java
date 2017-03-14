@@ -1,8 +1,6 @@
 package com.sqchen.vhabit.adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sqchen.vhabit.R;
-import com.sqchen.vhabit.beans.Dynamic;
+import com.sqchen.vhabit.bean.Dynamic;
 
 import java.util.ArrayList;
 import java.util.List;

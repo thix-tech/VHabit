@@ -6,7 +6,7 @@
               android:background="@color/greyBg"
              tools:context="com.sqchen.vhabit.fragment.personal.ByHabitFrag">
 
-    <com.sqchen.vhabit.widgets.ListViewForScrollView
+    <com.sqchen.vhabit.widget.ListViewForScrollView
         android:id="@+id/personal_habit_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

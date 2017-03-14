@@ -16,8 +16,8 @@ import com.sqchen.vhabit.R;
 import com.sqchen.vhabit.activity.FriendsActivity;
 import com.sqchen.vhabit.activity.SettingsActivity;
 import com.sqchen.vhabit.adapter.FragmentDealAdapter;
-import com.sqchen.vhabit.widgets.CustomTitleView;
-import com.sqchen.vhabit.widgets.ViewPagerForScrollView;
+import com.sqchen.vhabit.widget.CustomTitleView;
+import com.sqchen.vhabit.widget.ViewPagerForScrollView;
 
 import java.util.ArrayList;
 import java.util.List;

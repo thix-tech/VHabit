@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sqchen.vhabit.R;
-import com.sqchen.vhabit.beans.Habit;
+import com.sqchen.vhabit.bean.Habit;
 
 import java.util.List;
 

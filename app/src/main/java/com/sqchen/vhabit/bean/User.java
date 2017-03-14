@@ -1,17 +1,25 @@
-package com.sqchen.vhabit.beans;
+package com.sqchen.vhabit.bean;
 
 import java.io.Serializable;
 import java.util.List;
+
+import cn.bmob.v3.BmobObject;
 
 /**
  * 用户实体类
  * Created by Administrator on 2017/3/2.
  */
 
-public class User implements Serializable{
+public class User extends BmobObject implements Serializable{
 
     //用户头像id
     private int userIconId;
+
+    //用户手机号
+    private String userAccount;
+
+    //用户密码
+    private String userPassword;
 
     //用户名
     private String userName;
@@ -125,4 +133,20 @@ public class User implements Serializable{
         this.totalLikeNum = totalLikeNum;
     }
 
+    public String getUserTel() {
+        return userAccount;
+    }
+
+    public void setUserTel(String userTel) {
+        this.userAccount = userTel;
+    }
+
+
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
 }

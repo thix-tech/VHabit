@@ -78,16 +78,8 @@ public class DynamicListAdapter extends ArrayAdapter {
             holder.habitDuration = (TextView) convertView.findViewById(R.id.dynamic_habit_duration);
             holder.dynamicImg = (ImageView) convertView.findViewById(R.id.dynamic_img);
             holder.dynamicTxt = (TextView) convertView.findViewById(R.id.dynamic_text);
-            holder.likedUser1 = (ImageView) convertView.findViewById(R.id.dynamic_like_user_1);
-            holder.likedUser2 = (ImageView) convertView.findViewById(R.id.dynamic_like_user_2);
-            holder.likedUser3 = (ImageView) convertView.findViewById(R.id.dynamic_like_user_3);
-            holder.likedUser4 = (ImageView) convertView.findViewById(R.id.dynamic_like_user_4);
-            holder.likedUser5 = (ImageView) convertView.findViewById(R.id.dynamic_like_user_5);
-            holder.likedUser6 = (ImageView) convertView.findViewById(R.id.dynamic_like_user_6);
-            holder.likedUser7 = (ImageView) convertView.findViewById(R.id.dynamic_like_user_7);
             holder.likedNum = (TextView) convertView.findViewById(R.id.dynamic_liked_num);
             holder.commentNum = (TextView) convertView.findViewById(R.id.dynamic_comment_num);
-            holder.mLikeLin = (LinearLayout) convertView.findViewById(R.id.dynamic_lin_liked);
             holder.dynamicLinLike = (LinearLayout) convertView.findViewById(R.id.dynamic_lin_click_like);
             holder.dynamicLinComment = (LinearLayout) convertView.findViewById(R.id.dynamic_lin_click_comment);
             holder.dynamicLinMore = (LinearLayout) convertView.findViewById(R.id.dynamic_lin_click_more);
@@ -124,14 +116,7 @@ public class DynamicListAdapter extends ArrayAdapter {
         } else {    //否则，隐藏该布局
             holder.dynamicImg.setVisibility(View.GONE);
         }
-        //如果点赞人数为0，则设置点赞行区域布局为不可见，点赞人数设置为0
-        if(mDynamicList.get(position).getLikedUsers() == null ) {
-            holder.mLikeLin.setVisibility(View.GONE);
-            holder.likedNum.setText("0");
-        } else {    //否则设置为可见，并且设置点赞人数
-            holder.mLikeLin.setVisibility(View.VISIBLE);
-            holder.likedNum.setText(String.valueOf(mDynamicList.get(position).getLikedUsers().size()));
-        }
+
         holder.commentNum.setText(String.valueOf(mDynamicList.get(position).getCommentNum()));
 
         holder.dynamicHabit.setOnClickListener(new View.OnClickListener() {
@@ -218,9 +203,6 @@ public class DynamicListAdapter extends ArrayAdapter {
         TextView commentNum;
 
         private ImageView mLikeImg;
-
-        //最多显示七个点赞用户的头像
-        ImageView likedUser1,likedUser2,likedUser3,likedUser4,likedUser5,likedUser6,likedUser7;
 
         //点赞行布局区域
         LinearLayout mLikeLin;

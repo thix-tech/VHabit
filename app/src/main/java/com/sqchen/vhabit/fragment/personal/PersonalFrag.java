@@ -16,6 +16,7 @@ import com.sqchen.vhabit.R;
 import com.sqchen.vhabit.activity.FriendsActivity;
 import com.sqchen.vhabit.activity.SettingsActivity;
 import com.sqchen.vhabit.adapter.FragmentDealAdapter;
+import com.sqchen.vhabit.util.SharePreferencesUtil;
 import com.sqchen.vhabit.widget.CustomTitleView;
 import com.sqchen.vhabit.widget.ViewPagerForScrollView;
 
@@ -86,7 +87,7 @@ public class PersonalFrag extends Fragment implements View.OnClickListener,ViewP
         psTitleView = (CustomTitleView) rootView.findViewById(R.id.frag_title_personal);
         psTitleView.setImgLeft(R.drawable.ic_banner_add_friend);
         psTitleView.setImgRight(R.drawable.ic_banner_set);
-        psTitleView.setTxtCenter(getString(R.string.user_name));
+        psTitleView.setTxtCenter(SharePreferencesUtil.getUserName(getContext()));
         psTitleView.setImgRightOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

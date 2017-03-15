@@ -3,6 +3,8 @@ package com.sqchen.vhabit.bean;
 import java.io.Serializable;
 import java.util.List;
 
+import cn.bmob.v3.BmobObject;
+
 /**
  * 动态实体类，本项目所有注释文档里提到的“动态”，均指用户动态。
  * Created by Administrator on 2017/3/2.
@@ -61,7 +63,7 @@ public class Dynamic implements Serializable{
     public Dynamic(int iconId,String name,String habit,
                    String timeStr,String durationStr,
                    int dynamicImgId,String dynamicTxt,
-                   List<User> likedList,int commentNum) {
+                   int commentNum) {
         this.userIconId = iconId;
         this.userName = name;
         this.userHabit = habit;
@@ -69,8 +71,6 @@ public class Dynamic implements Serializable{
         this.durationStr = durationStr;
         this.dynamicImgId = dynamicImgId;
         this.dynamicTxt = dynamicTxt;
-        this.likedUsers = likedList;
-//        this.likeNum = this.likedUsers.size();
         this.commentNum = commentNum;
     }
 

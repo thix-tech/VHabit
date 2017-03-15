@@ -112,6 +112,7 @@
         android:textSize="15sp"
         android:gravity="left"
         android:layout_marginLeft="20dp"
+        android:minHeight="50dp"
         />
 
     <View
@@ -119,83 +120,6 @@
         android:background="@color/lines_bg"
         android:layout_height="0.1dp"/>
 
-    <LinearLayout
-        android:id="@+id/dynamic_lin_liked"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        android:gravity="center_vertical"
-        >
-        <ImageView
-            android:id="@+id/dynamic_like_sign"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/ic_mindfeed_liked"
-            />
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/dynamic_like_user_1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/user_1"
-            />
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/dynamic_like_user_2"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/user_1"
-            />
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/dynamic_like_user_3"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/user_1"
-            />
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/dynamic_like_user_4"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/user_1"
-            />
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/dynamic_like_user_5"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/user_1"
-            />
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/dynamic_like_user_6"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/user_1"
-            />
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/dynamic_like_user_7"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/user_1"
-            />
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/dynamic_like_user_more"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/more_like_avatar"
-            />
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.00000001dp"
-        android:background="@color/text_grey_light"
-        />
 
     <LinearLayout
         android:id="@+id/hot_dynamic_bottom"

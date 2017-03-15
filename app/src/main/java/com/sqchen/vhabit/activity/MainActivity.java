@@ -1,9 +1,13 @@
 package com.sqchen.vhabit.activity;
 
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -14,6 +18,7 @@ import com.sqchen.vhabit.fragment.find.FindFrag;
 import com.sqchen.vhabit.fragment.habit.HabitFrag;
 import com.sqchen.vhabit.fragment.message.MessageFrag;
 import com.sqchen.vhabit.fragment.personal.PersonalFrag;
+import com.sqchen.vhabit.util.MyDatabaseHelper;
 
 /**
  * 主界面Activity，用于承载四个fragment
@@ -57,6 +62,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         initViews();
         mManager = getSupportFragmentManager();
         setTabSelection(0);
+//        outputLog();
     }
 
     private void initViews() {
@@ -201,4 +207,5 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         tvMessage.setTextColor(getResources().getColor(R.color.textNormal));
         tvPersonal.setTextColor(getResources().getColor(R.color.textNormal));
     }
+
 }

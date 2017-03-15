@@ -1,13 +1,15 @@
 package com.sqchen.vhabit.bean;
 
+import cn.bmob.v3.BmobObject;
+
 /**
  * 用户习惯实体类
  * Created by Administrator on 2017/2/28.
  */
 
-public class Habit {
+public class Habit extends BmobObject{
     //习惯图标
-    private int habitImageId;
+    private int habitImageId = 0;
 
     //习惯名称
     private String habitName;
@@ -18,7 +20,16 @@ public class Habit {
     //今日是否坚持习惯
     private boolean isFinished;
 
+    //选择该习惯的人
     private int selectedNum;
+
+    public Habit() {
+
+    }
+
+    public Habit(String name) {
+        this.habitName = name;
+    }
 
     public Habit(int id, String name, String timeTxt) {
         this.habitImageId = id;

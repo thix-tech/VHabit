@@ -1,5 +1,6 @@
 package com.sqchen.vhabit.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -64,6 +65,13 @@ public class NewHabitActivity extends FragmentActivity implements View.OnClickLi
         mTitleView = (CustomTitleView) findViewById(R.id.title_view);
         mTitleView.setImgLeft(R.drawable.ic_banner_back);
         mTitleView.setTxtRight("创建");
+        mTitleView.setTxtRightOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),AddHabitActivity.class);
+                startActivity(intent);
+            }
+        });
         mTitleView.setTxtCenter("更多习惯");
         mTitleView.setImgLeftOnClickListener(new View.OnClickListener() {
             @Override

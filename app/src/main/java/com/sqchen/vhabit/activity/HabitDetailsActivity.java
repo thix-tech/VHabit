@@ -64,14 +64,14 @@ public class HabitDetailsActivity extends Activity {
     private void initData() {
         mDynamicList = new ArrayList<Dynamic>();
         mDynamicList.add(new Dynamic(R.drawable.user_1,"我是柠檬君","#对一天进行回顾#","今天 12:53","11天",
-                0,"我想要你",null,3));
+                0,"我想要你",3));
         mDynamicList.add(new Dynamic(R.drawable.user_5,"隐进盛夏的两脚兽","#对一天进行回顾#","2月26日","18天",
-                0,"红菜心开花了，田野的气息",null,3));
+                0,"红菜心开花了，田野的气息",3));
         mDynamicList.add(new Dynamic(R.drawable.user_3,"南木","#对一天进行回顾#","昨天 11:14","289天",
-                0,"大通道真的好美",null,3));
+                0,"大通道真的好美",3));
         mDynamicList.add(new Dynamic(R.drawable.user_1,"我是柠檬君","#对一天进行回顾#","昨天 20:14","291天",
                 0,"奥地利表现主义；毕加索与勃拉克之后的巴黎立体主义；意大利未来主义。各国艺术的线代主义化，" +
-                "我觉得这些作品并不需要用来理解，只能用来感受。",null,3));
+                "我觉得这些作品并不需要用来理解，只能用来感受。",3));
     }
 
 

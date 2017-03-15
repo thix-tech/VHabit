@@ -62,31 +62,39 @@ public class HabitListAdapter extends ArrayAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         //填充数据
-        holder.habitImg.setImageResource(mDataList.get(position).getHabitImageId());
+        if(mDataList.get(position).getHabitImageId() == 0) {
+            holder.habitImg.setImageResource(R.drawable.tree_seed);
+        } else {
+            holder.habitImg.setImageResource(mDataList.get(position).getHabitImageId());
+        }
         holder.habitName.setText(mDataList.get(position).getHabitName());
-        holder.habitTimeTxt.setText((mDataList.get(position).getHabitTimeTxt()));
-        //设置触摸事件，添加触摸动画
-        holder.habitCell.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                //布局放大动画
-                ObjectAnimator scaleX = ObjectAnimator.ofFloat(view,"scaleX",1,(float)1.1);
-                ObjectAnimator scaleY = ObjectAnimator.ofFloat(view,"scaleY",1,(float)1.1);
-                scaleX.setDuration(500);
-                scaleY.setDuration(500);
-                scaleX.start();
-                scaleY.start();
-
-                //布局缩小动画
-                ObjectAnimator scaleToSmallX = ObjectAnimator.ofFloat(view,"scaleX",(float)1.1,1);
-                ObjectAnimator scaleToSmallY = ObjectAnimator.ofFloat(view,"scaleY",(float)1.1,1);
-                scaleToSmallX.setDuration(500);
-                scaleToSmallY.setDuration(500);
-                scaleToSmallX.start();
-                scaleToSmallY.start();
-                return false;
-            }
-        });
+        if(mDataList.get(position).getHabitTimeTxt() == null) {
+            holder.habitTimeTxt.setText("已坚持0天");
+        } else {
+            holder.habitTimeTxt.setText((mDataList.get(position).getHabitTimeTxt()));
+        }
+//        //设置触摸事件，添加触摸动画
+//        holder.habitCell.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                //布局放大动画
+//                ObjectAnimator scaleX = ObjectAnimator.ofFloat(view,"scaleX",1,(float)1.1);
+//                ObjectAnimator scaleY = ObjectAnimator.ofFloat(view,"scaleY",1,(float)1.1);
+//                scaleX.setDuration(500);
+//                scaleY.setDuration(500);
+//                scaleX.start();
+//                scaleY.start();
+//
+//                //布局缩小动画
+//                ObjectAnimator scaleToSmallX = ObjectAnimator.ofFloat(view,"scaleX",(float)1.1,1);
+//                ObjectAnimator scaleToSmallY = ObjectAnimator.ofFloat(view,"scaleY",(float)1.1,1);
+//                scaleToSmallX.setDuration(500);
+//                scaleToSmallY.setDuration(500);
+//                scaleToSmallX.start();
+//                scaleToSmallY.start();
+//                return false;
+//            }
+//        });
 
         return convertView;
     }

@@ -108,7 +108,7 @@ public class RingProgressView extends View {
     }
 
     //开始动画，即签到
-    public boolean startUpdate(final ImageView v1,final View v2,final View v3) {
+    public boolean startUpdate(final ImageView v1,final View v2,final View v3,final String habitName) {
         ValueAnimator valueAnimator = ValueAnimator.ofFloat(0f,360 * 1.0f);
         valueAnimator.setDuration(500);
         valueAnimator.setInterpolator(new Interpolator() {
@@ -138,6 +138,7 @@ public class RingProgressView extends View {
                             v3.setVisibility(View.VISIBLE);
                             //打开发表动态界面
                             Intent intent =  new Intent(getContext(), PublishDynamicActivity.class);
+                            intent.putExtra("HABIT_NAME",habitName);
                             getContext().startActivity(intent);
                         }
 

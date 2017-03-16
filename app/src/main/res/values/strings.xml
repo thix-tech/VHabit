@@ -32,4 +32,5 @@
     <string name="str_register_success">注册成功！</string>
     <string name="str_register_failed">"注册失败！可能是因为你长得太丑了 -_-|| "</string>
     <string name="str_register">注册</string>
+    <string name="str_habit_details_tool">工具</string>
 </resources>

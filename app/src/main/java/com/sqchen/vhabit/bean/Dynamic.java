@@ -10,10 +10,13 @@ import cn.bmob.v3.BmobObject;
  * Created by Administrator on 2017/3/2.
  */
 
-public class Dynamic implements Serializable{
+public class Dynamic extends BmobObject implements Serializable{
 
-    //用户ID
-    private int userId;
+    //动态编号ID*
+    private int dynamicId;
+
+    //用户ID*
+    private String userAccount;
 
     //用户名
     private String userName;
@@ -21,10 +24,10 @@ public class Dynamic implements Serializable{
     //用户头像id
     private int userIconId;
 
-    //用户坚持的习惯
-    private String userHabit;
+    //用户坚持的习惯*
+    private String habitName;
 
-    //动态发表时间
+    //动态发表时间#
     private String publishTimeStr;
 
     //习惯坚持时间
@@ -33,13 +36,13 @@ public class Dynamic implements Serializable{
     //动态主题图片
     private int dynamicImgId;
 
-    //动态主题文字
+    //动态主题文字#
     private String dynamicTxt;
 
     //点赞该动态的用户数组
     private List<User> likedUsers = null;
 
-    //该动态的评论数量
+    //该动态的评论数量#
     private int commentNum;
 
     //该习惯的开始时间
@@ -47,6 +50,10 @@ public class Dynamic implements Serializable{
 
     //该习惯的结束时间
     private String habitOverTime;
+
+    public Dynamic() {
+
+    }
 
     /**
      * 用于“热门”界面中热门动态里的习惯数据
@@ -57,7 +64,6 @@ public class Dynamic implements Serializable{
      * @param durationStr
      * @param dynamicImgId
      * @param dynamicTxt
-     * @param likedList
      * @param commentNum
      */
     public Dynamic(int iconId,String name,String habit,
@@ -66,7 +72,7 @@ public class Dynamic implements Serializable{
                    int commentNum) {
         this.userIconId = iconId;
         this.userName = name;
-        this.userHabit = habit;
+        this.habitName = habit;
         this.publishTimeStr = timeStr;
         this.durationStr = durationStr;
         this.dynamicImgId = dynamicImgId;
@@ -82,7 +88,7 @@ public class Dynamic implements Serializable{
      * @param dayNum
      */
     public Dynamic(String habit,String beginTime,String overTime,String dayNum) {
-        this.userHabit = habit;
+        this.habitName = habit;
         this.habitBeginTime = beginTime;
         this.habitOverTime = overTime;
         this.durationStr = dayNum;
@@ -96,7 +102,7 @@ public class Dynamic implements Serializable{
      * @param dayNum
      */
     public Dynamic(String habit,String beginTime,String overTime,String dayNum,String dynamicText,String publishTimeStr) {
-        this.userHabit = habit;
+        this.habitName = habit;
         this.habitBeginTime = beginTime;
         this.habitOverTime = overTime;
         this.durationStr = dayNum;
@@ -121,12 +127,12 @@ public class Dynamic implements Serializable{
         this.userIconId = userIconId;
     }
 
-    public String getUserHabit() {
-        return userHabit;
+    public String getHabitName() {
+        return habitName;
     }
 
-    public void setUserHabit(String userHabit) {
-        this.userHabit = userHabit;
+    public void setHabitName(String habitName) {
+        this.habitName = habitName;
     }
 
     public String getPublishTimeStr() {
@@ -169,7 +175,6 @@ public class Dynamic implements Serializable{
         this.likedUsers = likedUsers;
     }
 
-
     public int getCommentNum() {
         return commentNum;
     }
@@ -193,4 +198,21 @@ public class Dynamic implements Serializable{
     public void setHabitOverTime(String habitOverTime) {
         this.habitOverTime = habitOverTime;
     }
+
+    public int getDynamicId() {
+        return dynamicId;
+    }
+
+    public void setDynamicId(int dynamicId) {
+        this.dynamicId = dynamicId;
+    }
+
+    public String getUserAccount() {
+        return userAccount;
+    }
+
+    public void setUserAccount(String userAccount) {
+        this.userAccount = userAccount;
+    }
+
 }

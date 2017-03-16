@@ -72,7 +72,7 @@ public class ByHabitListAdapter extends ArrayAdapter {
             holder.habitDynamicTime.setText(mDynamicList.get(position).getPublishTimeStr());
         }
         //填充各项数据
-        holder.habitTxt.setText(mDynamicList.get(position).getUserHabit());
+        holder.habitTxt.setText(mDynamicList.get(position).getHabitName());
         holder.habitBeginTime.setText(mDynamicList.get(position).getHabitBeginTime());
         holder.habitOverTime.setText(mDynamicList.get(position).getHabitOverTime());
         holder.habitDuration.setText(mDynamicList.get(position).getDurationStr());

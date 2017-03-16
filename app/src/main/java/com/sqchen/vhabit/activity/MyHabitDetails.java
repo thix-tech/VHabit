@@ -37,21 +37,26 @@ import cn.bmob.v3.listener.UpdateListener;
 
 public class MyHabitDetails extends Activity {
 
+    //中间的签到按钮
     private ImageView checkImgBtn;
 
+    //签到区域
     private LinearLayout mCheckWhiteLin;
 
     private CustomTitleView mTitleView;
 
     private TextView todayTxt;
 
+    //发表动态按钮
     private ImageView mRecordImg;
 
+    //签到按钮的外圆控件
     private RingProgressView mProgressView;
 
     private FrameLayout mFrameLayout;
 
-    private LinearLayout mGrowLin;
+    //周视图区域
+    private LinearLayout mLinGrow;
 
     private ListViewForScrollView mListView;
 
@@ -61,19 +66,28 @@ public class MyHabitDetails extends Activity {
 
     private ScrollView mScrollView;
 
+    //记录今天是否已经签到
     private boolean isFinished;
 
+    //接收HabitFrag传递过来的Intent实例
     private Intent mIntent = null;
 
+    //当前查看的习惯
     private Habit currentHabit;
 
+    //当前"用户习惯"，即UserAndHabit，用于获取签到信息
     private UserAndHabit currentData;
 
+    //进度对话框
     private DlgLoading mDlgLoading;
 
+    //当前是星期几
     private int week;
 
+    //星期文本控件
     private TextView growTxt1,growTxt2,growTxt3,growTxt4,growTxt5,growTxt6,growTxt7;
+
+    //星期图片控件
     private ImageView growImg1,growImg2,growImg3,growImg4,growImg5,growImg6,growImg7;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +101,7 @@ public class MyHabitDetails extends Activity {
         mTitleView = (CustomTitleView) findViewById(R.id.habit_details_title_view);
         mTitleView.setImgLeft(R.drawable.ic_banner_back);
         mTitleView.setTxtCenter(currentHabit.getHabitName());
-        mTitleView.setTxtRight("工具");
+        mTitleView.setTxtRight(getString(R.string.str_habit_details_tool));
         mTitleView.setImgLeftOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -104,6 +118,14 @@ public class MyHabitDetails extends Activity {
         todayTxt = (TextView) findViewById(R.id.habit_details_today);
         mRecordImg = (ImageView) findViewById(R.id.habit_details_record);
         mRecordImg.setImageResource(R.drawable.checkin_record_up);
+        mRecordImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MyHabitDetails.this,PublishDynamicActivity.class);
+                intent.putExtra("HABIT_NAME",currentHabit.getHabitName());
+                startActivity(intent);
+            }
+        });
 
         growTxt1 = (TextView) findViewById(R.id.grow_txt_1);
         growTxt2 = (TextView) findViewById(R.id.grow_txt_2);
@@ -131,17 +153,17 @@ public class MyHabitDetails extends Activity {
             @Override
             public void onClick(View v) {
                 Log.d("currentData",currentData.getHabitName() + currentData.isFinished());
-                changeStatus(currentData);
+                checkStatus(currentData);
             }
         });
 
         //生长统计布局
-        mGrowLin = (LinearLayout) findViewById(R.id.habit_details_grow_lin);
+        mLinGrow = (LinearLayout) findViewById(R.id.habit_details_grow_lin);
 
-        initDynamics();
         mListView = (ListViewForScrollView) findViewById(R.id.habit_details_listview);
-        mAdapter = new DynamicListAdapter(this,mDynamicList,false,false);
-        mListView.setAdapter(mAdapter);
+        //初始化动态数组，并绑定适配器
+        initDynamics();
+
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -158,15 +180,7 @@ public class MyHabitDetails extends Activity {
     //初始化点赞动态用户数组的数据
     private void initDynamics() {
         mDynamicList = new ArrayList<Dynamic>();
-        mDynamicList.add(new Dynamic(R.drawable.user_1,"我是柠檬君","#对一天进行回顾#","今天 12:53","11天",
-                0,"我想要你",3));
-        mDynamicList.add(new Dynamic(R.drawable.user_5,"隐进盛夏的两脚兽","#对一天进行回顾#","2月26日","18天",
-                0,"红菜心开花了，田野的气息",3));
-        mDynamicList.add(new Dynamic(R.drawable.user_3,"南木","#对一天进行回顾#","昨天 11:14","289天",
-                0,"大通道真的好美",3));
-        mDynamicList.add(new Dynamic(R.drawable.user_1,"我是柠檬君","#对一天进行回顾#","昨天 20:14","291天",
-                0,"奥地利表现主义；毕加索与勃拉克之后的巴黎立体主义；意大利未来主义。各国艺术的线代主义化，" +
-                "我觉得这些作品并不需要用来理解，只能用来感受。",3));
+        getHabitDynamic();
     }
 
     /**
@@ -203,7 +217,11 @@ public class MyHabitDetails extends Activity {
         });
     }
 
-    private void changeStatus(UserAndHabit userAndHabit) {
+    /**
+     * 根据是否已经签到进行签到数据更改
+     * @param userAndHabit
+     */
+    private void checkStatus(UserAndHabit userAndHabit) {
         String todayStr = DateStrUtil.changeDateToStr(DateStrUtil.MIN_FORMAT,new Date());
         Log.d("sqchen","今天是：" + todayStr);
         //如果还没签到，则改为已经签到，并且播放动画
@@ -211,7 +229,7 @@ public class MyHabitDetails extends Activity {
             changeHabitStatus(userAndHabit,true,todayStr);
             //设置周视图选中状态
             setGrowChecked(week);
-            mProgressView.startUpdate(checkImgBtn,mFrameLayout,mRecordImg);
+            mProgressView.startUpdate(checkImgBtn,mFrameLayout,mRecordImg,currentHabit.getHabitName());
             isFinished = true;
         } else{
             changeHabitStatus(userAndHabit,false,userAndHabit.getFinishedTime());
@@ -221,6 +239,12 @@ public class MyHabitDetails extends Activity {
         }
     }
 
+    /**
+     * 更新签到数据
+     * @param userAndHabit
+     * @param isFinished
+     * @param todayStr
+     */
     private void changeHabitStatus(UserAndHabit userAndHabit, final boolean isFinished, String todayStr) {
         userAndHabit.setValue("isFinished",isFinished);
         userAndHabit.setValue("finishedTime",todayStr);
@@ -321,5 +345,24 @@ public class MyHabitDetails extends Activity {
         growTxt7.setTextColor(getResources().getColor(R.color.text_grey_light));
     }
 
+    /**
+     * 加载该习惯的所有动态
+     */
+    private void getHabitDynamic() {
+        BmobQuery<Dynamic> dynamiQuery = new BmobQuery<Dynamic>();
+        dynamiQuery.addWhereEqualTo("habitName",currentHabit.getHabitName());
+        dynamiQuery.findObjects(new FindListener<Dynamic>() {
+            @Override
+            public void done(List<Dynamic> list, BmobException e) {
+                if(e == null) {
+                    for(Dynamic dynamic : list) {
+                        mDynamicList.add(dynamic);
+                    }
+                    mAdapter = new DynamicListAdapter(MyHabitDetails.this,mDynamicList,false,false);
+                    mListView.setAdapter(mAdapter);
+                }
+            }
+        });
+    }
 
 }

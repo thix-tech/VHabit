@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.sqchen.vhabit.R;
 import com.sqchen.vhabit.bean.Habit;
+import com.sqchen.vhabit.bean.UserAndHabit;
 
 import java.util.List;
 
@@ -28,10 +29,13 @@ public class HabitListAdapter extends ArrayAdapter {
     //“习惯”数组
     private List<Habit> mDataList;
 
-    public HabitListAdapter(Context context,List<Habit> list) {
-        super(context,0,list);
+    private List<UserAndHabit> mUserAndHabits;
+
+    public HabitListAdapter(Context context, List<Habit> habitList, List<UserAndHabit> userHabitList) {
+        super(context,0,habitList);
         mInflater = LayoutInflater.from(context);
-        mDataList = list;
+        mDataList = habitList;
+        this.mUserAndHabits = userHabitList;
     }
 
     @Override
@@ -72,6 +76,13 @@ public class HabitListAdapter extends ArrayAdapter {
             holder.habitTimeTxt.setText("已坚持0天");
         } else {
             holder.habitTimeTxt.setText((mDataList.get(position).getHabitTimeTxt()));
+        }
+
+        //如果今天签到了，则显示
+        if(mUserAndHabits.get(position).isFinished()) {
+            holder.habitFinish.setVisibility(View.VISIBLE);
+        } else {    //否则，隐藏
+            holder.habitFinish.setVisibility(View.INVISIBLE);
         }
 //        //设置触摸事件，添加触摸动画
 //        holder.habitCell.setOnTouchListener(new View.OnTouchListener() {

@@ -49,6 +49,9 @@ public class HabitFrag extends Fragment {
     //习惯数组
     private List<Habit> mDataList = new ArrayList<>();
 
+    //“用户习惯”数组
+    private List<UserAndHabit> mUserAndHabits = new ArrayList<UserAndHabit>();
+
     private DlgLoading mDlgLoading;
 
     private ImageView mFinishedImg;
@@ -132,10 +135,11 @@ public class HabitFrag extends Fragment {
                         mDlgLoading.dismiss();
                         return;
                     }
-                    isFinishedList = new Boolean[list.size()];
+//                    isFinishedList = new Boolean[list.size()];
                     int i = 0;
                     for(UserAndHabit userAndHabit :list) {
                         //获取习惯数据
+                        mUserAndHabits = list;
                         getHabit(userAndHabit);
 //                        isFinishedList[i] = userAndHabit.isFinished();
 //                        i++;
@@ -163,9 +167,9 @@ public class HabitFrag extends Fragment {
                     for(Habit habit : list) {
                         Log.d("user_habit","习惯名称：" + habit.getHabitName() + "\n");
                         mDataList.add(habit);
-                        mListAdapter = new HabitListAdapter(getContext(),mDataList);
-                        mHabitListView.setAdapter(mListAdapter);
                     }
+                    mListAdapter = new HabitListAdapter(getContext(),mDataList,mUserAndHabits);
+                    mHabitListView.setAdapter(mListAdapter);
                     mDlgLoading.dismiss();
                 } else {
                     ToastUtil.toastShow(getContext(),"获取习惯数据失败！");

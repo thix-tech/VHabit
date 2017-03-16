@@ -4,6 +4,7 @@ package com.sqchen.vhabit.fragment.habit;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,10 @@ import com.sqchen.vhabit.bean.Habit;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -39,14 +44,13 @@ public class HotFrag extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_hot, container, false);
 
-        initData();
         mListView = (ListView) rootView.findViewById(R.id.new_hot_list_view);
-        mAdapter = new NewHabitListAdapter(getContext(),mHabitList);
-        mListView.setAdapter(mAdapter);
+        initData();
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getContext(), HabitDetailsActivity.class);
+                intent.putExtra("SELECT_HABIT",mHabitList.get(position));
                 startActivity(intent);
             }
         });
@@ -56,25 +60,22 @@ public class HotFrag extends Fragment {
 
     private void initData() {
         mHabitList = new ArrayList<Habit>();
-        mHabitList.add(new Habit(R.drawable.tree_seed,"早起",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"每天看书一小时",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"画画",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"PLANK",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"早睡",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"吃早餐",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"跑步",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"多喝水",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"美食",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"减肥",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"每天拍张照片",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"一句话日记",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"学英语",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"每天运动",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"健身",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"每日一图",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"摄影",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"坚持每天到VHabit签到",785255));
-        mHabitList.add(new Habit(R.drawable.tree_seed,"保持正能量",785255));
+        BmobQuery<Habit> habitQuery = new BmobQuery<Habit>();
+        habitQuery.findObjects(new FindListener<Habit>() {
+            @Override
+            public void done(List<Habit> list, BmobException e) {
+                if(e == null) {
+                    for(Habit habit : list) {
+                        mHabitList.add(habit);
+                    }
+                    mAdapter = new NewHabitListAdapter(getContext(),mHabitList);
+                    mListView.setAdapter(mAdapter);
+                    Log.d("sqchen","成功获取所有习惯！");
+                } else {
+                    Log.d("sqchen","获取所有习惯失败！");
+                }
+            }
+        });
     }
 
 }

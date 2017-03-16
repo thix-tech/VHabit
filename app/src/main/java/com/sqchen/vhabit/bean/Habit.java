@@ -23,6 +23,12 @@ public class Habit extends BmobObject{
     //选择该习惯的人
     private int selectedNum;
 
+    //该习惯的开始时间
+    private String habitBeginTime;
+
+    //该习惯的结束时间
+    private String habitOverTime;
+
     public Habit() {
 
     }
@@ -81,5 +87,21 @@ public class Habit extends BmobObject{
 
     public void setSelectedNum(int selectedNum) {
         this.selectedNum = selectedNum;
+    }
+
+    public String getHabitBeginTime() {
+        return habitBeginTime;
+    }
+
+    public void setHabitBeginTime(String habitBeginTime) {
+        this.habitBeginTime = habitBeginTime;
+    }
+
+    public String getHabitOverTime() {
+        return habitOverTime;
+    }
+
+    public void setHabitOverTime(String habitOverTime) {
+        this.habitOverTime = habitOverTime;
     }
 }

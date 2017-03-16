@@ -102,10 +102,14 @@ public class DynamicListAdapter extends ArrayAdapter {
             holder.linFrom.setVisibility(View.GONE);
         }
         //填充数据
-        holder.userIcon.setImageBitmap(BitmapUtil.readBitmap(getContext(),mDynamicList.get(position).getUserIconId()));
+        if(mDynamicList.get(position).getUserIconId() != 0) {
+            holder.userIcon.setImageBitmap(BitmapUtil.readBitmap(getContext(),mDynamicList.get(position).getUserIconId()));
+        } else {
+            holder.userIcon.setImageBitmap(BitmapUtil.readBitmap(getContext(),R.drawable.user_1));
+        }
         holder.userName.setText(mDynamicList.get(position).getUserName());
         holder.publishTime.setText(mDynamicList.get(position).getPublishTimeStr());
-        holder.dynamicHabit.setText(mDynamicList.get(position).getUserHabit());
+        holder.dynamicHabit.setText("#" + mDynamicList.get(position).getHabitName() + "#");
         holder.habitDuration.setText(mDynamicList.get(position).getDurationStr());
         holder.dynamicTxt.setText(mDynamicList.get(position).getDynamicTxt());
 
